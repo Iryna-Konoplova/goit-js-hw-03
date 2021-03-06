@@ -40,21 +40,17 @@
 const findBestEmployee = function(employees) {
     
     const arrayEmployee = Object.keys(employees);
-    console.log(arrayEmployee);
-    
-    
-
-    let bestEmployee = 0;
-    // console.log(bestEmployee);
-
+   
+    let maxNumberOfTasks = 0;
+    let nameBestEmployee;
+  
     for (const arr of arrayEmployee) {
-        if (bestEmployee < employees[arr]) {
-            bestEmployee = employees[arr];
+        if (maxNumberOfTasks < employees[arr]) {
+          maxNumberOfTasks = employees[arr];
+          nameBestEmployee = arr;
        }
-        // console.log(employees[arr]);
-
     }
-    return bestEmployee;
+    return nameBestEmployee;
  };
 
 
